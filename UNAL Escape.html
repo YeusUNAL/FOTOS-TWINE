@@ -11,15 +11,21 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play UNAL Escape.</tw-noscript></noscript></tw-story>
 <tw-storydata name="UNAL Escape" startnode="5" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="7391D01C-5371-42FF-BDB7-0A12A1263102" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ultra&display=swap');
 
+/* Importamos de librerias web fuentes de texto para nuestro videojuego, en nuestro caso, importamos letra de estilo pixel art */
+
 tw-story {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
 }
+/* TW STORY, nos permite dar indicaciones a toda la historia en general, como el tamaño de texto, el estilo de este mismo, si es normal o BOLD, y la eleccion de su tipografia, con FONT FAMILY */
 
 tw-sidebar {
   display: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="About this game" tags="" position="300,200" size="100,100">(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Volver |Continuar]]
+}
+
+
+/* TW SIDEBAR permite configurar el boton de rehacer de este mismo, en mi caso puse que no se viera, o que no fuera usable */</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="About this game" tags="" position="300,200" size="100,100">(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Volver |Continuar]]
 
 
 &quot;UNAL ESCAPE&quot;, es una Aventura de Texto creada para la entrega de un proyecto de aprendizaje autonomo de la herramienta Twine para la Universidad Nacional de Colombia.
@@ -61,7 +67,8 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 
 }&lt;/style&gt;
-</tw-passagedata><tw-passagedata pid="3" name="Empezar" tags="" position="700,200" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
+
+ &lt;!-- el simbolo $ y la creacion de variables; con la funcion SET:, seguido de $(Nombre de la variable), podemos crear nuestras variables, y con la funcion PROMPT, podemos hacer que el jugador permita entrar STRINGS o INTS al juego  --&gt;</tw-passagedata><tw-passagedata pid="3" name="Empezar" tags="" position="700,200" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
 
 
 Porfin despiertas, necesitamos salir de aqui.
@@ -77,7 +84,8 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 }&lt;/style&gt;
 
-</tw-passagedata><tw-passagedata pid="4" name="Continuar" tags="" position="500,200" size="100,100">&lt;img src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/PORTADA%20OFICIAL.png?raw=true&quot; width=1200 height=515&gt;
+
+&lt;!-- Primer pasaje donde se ve por primera vez a L, links simples por el momento y todo lo que ya notamos. SOLO VOY A COMENTAR CUANDO AGREGUE NUEVAS FUNCIONES AL JUEGO  --&gt;</tw-passagedata><tw-passagedata pid="4" name="Continuar" tags="" position="500,200" size="100,100">&lt;img src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/PORTADA%20OFICIAL.png?raw=true&quot; width=1200 height=515&gt;
 
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;========XXXXXXXXXXXXXXX==&quot;)[&#39;&#39;
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Empezar]]
@@ -88,7 +96,9 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 
 
-&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Death%20Note%20-%20(Light&#39;s%20Theme%20A)%20Music%204.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="5" name="Inicio" tags="" position="400,0" size="100,100">Disclaimer: Este juego no busca justificar o defender practicas bandalicas provocadas por estas protestas, solo buscamos el entretenimiento de accion y aprendizaje educativo a base de estos acontecimientos. Todo lo dicho y hecho en este juego no buscar levantar nuevas protestas. Es pura y netamente ficcion.
+&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Death%20Note%20-%20(Light&#39;s%20Theme%20A)%20Music%204.mp3&quot; autoplay&gt;&lt;/audio&gt;
+
+&lt;!-- Encontramos la insercion de imagenes con IMG y la insercion de audios con AUDIO, son funciones mismas traidas de HTML  --&gt;</tw-passagedata><tw-passagedata pid="5" name="Inicio" tags="" position="400,0" size="100,100">Disclaimer: Este juego no busca justificar o defender practicas bandalicas provocadas por estas protestas, solo buscamos el entretenimiento de accion y aprendizaje educativo a base de estos acontecimientos. Todo lo dicho y hecho en este juego no buscar levantar nuevas protestas. Es pura y netamente ficcion.
 
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Continuar-&gt;recomendacion]]
 &lt;style&gt;tw-story { 
@@ -96,7 +106,8 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 
 }&lt;/style&gt;
-</tw-passagedata><tw-passagedata pid="6" name="¿Que es alerta roja?" tags="" position="900,400" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
+
+&lt;!--Bienvenido a mi juego de twine. Con estos cometaris veras para que sirve cada pasaje, cual es la idea y que sigue. Bien, aqui es simplemente el disclaimer basico, la primera aparicion de el STYLE y de LINKS, el STYLE es una funcion traida de CSS, es donde podemos editar lo visual del videojuego. y los LINKS, llevan a otro pasaje. Las funciones como BLUR o DISSOLVER, ayudan a crear un efecto de transicion entre cada pasaje --&gt;</tw-passagedata><tw-passagedata pid="6" name="¿Que es alerta roja?" tags="" position="900,400" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
 
 
 ¿No sabes que es?, bien, te explico rapido que tenemos que irnos.
@@ -133,7 +144,8 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 
 }&lt;/style&gt;
-</tw-passagedata><tw-passagedata pid="8" name="Ciencias Humanas y Economicas" tags="" position="1000,600" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
+
+&lt;!-- LINKS dobles, depende de lo que diga el jugador para que desemboque en una respuesta diferente --&gt;</tw-passagedata><tw-passagedata pid="8" name="Ciencias Humanas y Economicas" tags="" position="1000,600" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
 
 
 ¿Con que Humanas?, me gusta, bien, tienes que tener claro esto, ellos distinguen entre facultades, entonces ten cuidado.
@@ -206,7 +218,10 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 Bien, arribas veras tu inventario.
 
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[¿Cual es tu nombre?]]</tw-passagedata><tw-passagedata pid="13" name="¿Cual es tu nombre?" tags="" position="1300,1000" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[¿Cual es tu nombre?]]
+
+
+&lt;!-- SET DE VARIABLES, aqui hacemos todas las variables que vamos a utlizar; VIDA, sera la vida normal de el jugador que no debe llegar a 0, CREDITS, seran los creditos para comprar cosas dentro el juego, UNGRANI, sera uno de los items que podra comprar el jugador, CAZUELA, otro item comprable en la tienda de el juego. Por cierto, muchos de estos items podras conseguirlos tras responder bien algunas preguntas  --&gt;</tw-passagedata><tw-passagedata pid="13" name="¿Cual es tu nombre?" tags="" position="1300,1000" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Bakcground%201.png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
 &lt;style&gt;tw-story { 
 background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
@@ -217,7 +232,9 @@ Ohhh, perdoname, no me presente, me llamo L, mucho gusto $name, soy representant
 Demonios, se me olvidaba, ¿Conoces el mapa de la Sede?
 
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Si, lo conozco, escapemos ya]]
-(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Soy primiparo, entonces no]]</tw-passagedata><tw-passagedata pid="14" name="Soy primiparo, entonces no" tags="" position="1500,1000" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Soy primiparo, entonces no]]
+
+&lt;!-- Para twine, parece ser que una de las formas de mantener estas variables a la vista de el jugador es poniendo en todos los pasajes NAME, VIDA y CREDITOS, no he encontrado una forma general para evitar esto pero no le veo problema  --&gt;</tw-passagedata><tw-passagedata pid="14" name="Soy primiparo, entonces no" tags="" position="1500,1000" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;img src= &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/MAPA%20TWINE.png?raw=true&quot; width=800 height=600&gt;
 
 &lt;style&gt;tw-story { 
@@ -234,7 +251,8 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[[Quiero escapar ya-&gt;Si, lo conozco, escapemos ya]]]
 
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[¿Que consejo?]]
-</tw-passagedata><tw-passagedata pid="15" name="Si, lo conozco, escapemos ya" tags="" position="1500,1200" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+
+&lt;!-- Aqui mostramos el mapa del juego  --&gt;</tw-passagedata><tw-passagedata pid="15" name="Si, lo conozco, escapemos ya" tags="" position="1500,1200" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/L%20en%20biblioteca%20(Alerta).png?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot;&gt;
 
 &lt;style&gt;tw-story { 
@@ -272,7 +290,10 @@ Ruta hacia bloque 3.
 
 [[Volver al mapa-&gt;Ver mapa]]
 [[Seguir corriendo]]
-[[Entrar hacia bloque 3]]</tw-passagedata><tw-passagedata pid="18" name="Salida Ciencias Humanas" tags="" position="1900,1200" size="100,100">Esta en desarrollo...
+[[Entrar hacia bloque 3]]
+
+
+&lt;!-- El jugador sale de la Biblioteca  --&gt;</tw-passagedata><tw-passagedata pid="18" name="Salida Ciencias Humanas" tags="" position="1900,1200" size="100,100">Esta en desarrollo...
 
 [[Volver-&gt;Ver mapa]] </tw-passagedata><tw-passagedata pid="19" name="Ver mapa" tags="" position="1500,1400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;img src= &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/MAPA%20TWINE.png?raw=true&quot; width=800 height=600&gt;
@@ -311,7 +332,9 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 [[Volver al Bloque 3]]
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
-]</tw-passagedata><tw-passagedata pid="22" name="S" tags="" position="1050,1850" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+]
+
+&lt;!-- ALERT, IF y INTERACCION DE ESTAS VARIABLES; el ALERT y GOTO; sirve para dar un mensaje o una advertencia en modo de ventana al jugador, IF, son los macros condicionales de TWINE, aca en este caso le dije que si la vida llegaba a 0 tendria que ir a la pantalla de muerte.(TODOS LOS PASAJES DEBEN LLEVAR ESTE MISMO IF), INTERACCION DE VARIABLES, aca vemos como se puede jugar con estas variables, si sumas o restas. para sumar es normal + 20, aveces para restar tenemos que usar + -20, que es la suma de negativos. Finalmente el GOTO, que en llegado caso de estar fuera de el IF, nos redirecciona automaticamente apenas entremos en este pasaje, al pasaje que le asignemos  --&gt;</tw-passagedata><tw-passagedata pid="22" name="S" tags="" position="1050,1850" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;style&gt;tw-story { 
 background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
 &lt;/style&gt;
@@ -345,7 +368,10 @@ Estas observando la zona comun del piso 1 del Bloque 3, ves varias personas esco
 
 [[Ver mapa-&gt;MapaBloque3]]
 [[Subir segundo piso-&gt;piso2b3]]
-[[Salir del bloque-&gt;S]]</tw-passagedata><tw-passagedata pid="25" name="Dar vuelta por el piso 2" tags="" position="1700,1900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Salir del bloque-&gt;S]]
+
+
+&lt;!-- Entrada del bloque  --&gt;</tw-passagedata><tw-passagedata pid="25" name="Dar vuelta por el piso 2" tags="" position="1700,1900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;style&gt;tw-story { 
 background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
 &lt;/style&gt;
@@ -382,7 +408,10 @@ Si quieres apostamos tu destreza con algunas preguntas...La pregunta cuesta 2 cr
 [[Salir de la tienda-&gt;Inventario1]] 
 
 
-&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Shop%20-%20The%20Legend%20of%20Zelda_%20Ocarina%20of%20Time%204.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="27" name="Probar suerte con pregunta" tags="" position="1800,1500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Shop%20-%20The%20Legend%20of%20Zelda_%20Ocarina%20of%20Time%204.mp3&quot; autoplay&gt;&lt;/audio&gt;
+
+
+&lt;!-- OP ARITMETICAS CON IF, aca usamos las condiciones aritmeticas con los IF para decirle a TWINE que mostrar o no en pantalla. FALSE = NO MOSTRAR y TRUE = MOSTRAR</tw-passagedata><tw-passagedata pid="27" name="Probar suerte con pregunta" tags="" position="1800,1500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Death%20Note%20OST%20II%20-%20_Secret_.mp3&quot; autoplay&gt;&lt;/audio&gt;
 
 &lt;img src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/ChatGPT%20Image%2020%20sept%202026,%2006_16_38%20p.m..png?raw=true&quot; width=960 height=432&gt;&lt;/img&gt;
@@ -401,7 +430,9 @@ Aqui te va:
 
 </tw-passagedata><tw-passagedata pid="28" name="Comprar una Cazuelita por 10 creditos" tags="" position="2000,1600" size="100,100">(set:$Cazuela to ($Cazuela + 1))
 (set:$credits to ($credits + -5))
-(go-to:&quot;Entrar a la Choza&quot;))</tw-passagedata><tw-passagedata pid="29" name="Comprar UNgranizado por 5 creditos" tags="" position="1600,1600" size="100,100">(set:$Ungrani to ($Ungrani + 1))
+(go-to:&quot;Entrar a la Choza&quot;))
+
+&lt;!-- ESTOS PASAJES SIRVEN SOLO Y UNICAMENTE CON LA FUNCION DE CAMBIAR VARIABLES SIN REDIRIGIRME A OTRO PASAJE  --&gt;</tw-passagedata><tw-passagedata pid="29" name="Comprar UNgranizado por 5 creditos" tags="" position="1600,1600" size="100,100">(set:$Ungrani to ($Ungrani + 1))
 (set:$credits to ($credits + -5 ))
 (go-to:&quot;Entrar a la Choza&quot;))</tw-passagedata><tw-passagedata pid="30" name="Inventario1" tags="" position="2000,1900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 
@@ -423,9 +454,13 @@ $Cazuela Cazuelita
 
 (if: $vida &lt;= 90 and $Ungrani &gt; 0)[[Tomar 1 Ungranizado]]
 (if: $vida &lt;= 80 and $Ungrani &gt; 0)[[Comer 1 Cazuelita]]
-[[Salir al segundo piso-&gt;piso2b3]]</tw-passagedata><tw-passagedata pid="31" name="Tomar 1 Ungranizado" tags="" position="2200,1900" size="100,100">(set:$Ungrani to ($Ungrani -1))
+[[Salir al segundo piso-&gt;piso2b3]]
+
+&lt;!-- INVENTARIO COMUN DEL JUGADOR, aca usamos IF para MOSTRAR o NO MOSTRAR algo, ponemos en pantalla del jugador variables no visibles siempre como UNGRANI o CAZUELA, podria crear sistemas de IF para mostrar ITEMS en cada momento, pero la idea es que el jugador entre a los bloques, salga de ellos y asi ver una necesidad en entrar para usar estos ITEMS  --&gt;</tw-passagedata><tw-passagedata pid="31" name="Tomar 1 Ungranizado" tags="" position="2200,1900" size="100,100">(set:$Ungrani to ($Ungrani -1))
 (set:$vida to ($vida + 10))
-(go-to:&quot;Inventario1&quot;))</tw-passagedata><tw-passagedata pid="32" name="Comer 1 Cazuelita" tags="" position="2200,1700" size="100,100">(set:$Cazuelita to ($Cazuelita -1))
+(go-to:&quot;Inventario1&quot;))
+
+&lt;!-- Sirven para cambiar variables y en pocas palabras, toma el UNGRANIZADO  --&gt;</tw-passagedata><tw-passagedata pid="32" name="Comer 1 Cazuelita" tags="" position="2200,1700" size="100,100">(set:$Cazuelita to ($Cazuelita -1))
 (set:$vida to ($vida + 20))
 (go-to:&quot;Inventario1&quot;))</tw-passagedata><tw-passagedata pid="33" name="piso2b3" tags="" position="1600,1725" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;style&gt;tw-story { 
@@ -440,7 +475,9 @@ Llegaste a otra zona comun, y enhorabuena, encontraste una Choza.
 (if: not ((history:) contains &quot;Dar vuelta por el piso 2&quot;))[
 [[Dar vuelta por el piso 2]]]
 [[Entrar a la Choza]]
-[[Bajar-&gt;Entrar]]</tw-passagedata><tw-passagedata pid="34" name="MapaBloque3" tags="" position="1400,2100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Bajar-&gt;Entrar]]
+
+&lt;!-- Como ya dijimos ALERT, envia un mensaje al jugador, pero este IF con NOT HISTORY, crea un condicional con el cual despues de entrar en el y volver a este mismo pasaje desaparecera de las opciones  --&gt;</tw-passagedata><tw-passagedata pid="34" name="MapaBloque3" tags="" position="1400,2100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;img src= &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/MAPA%20TWINE.png?raw=true&quot; width=800 height=600&gt;
 
 &lt;style&gt;tw-story { 
@@ -552,7 +589,9 @@ K: Buen intento para la proxima, la respuesta era **La Revolucion de Octubre**:
 La Revolución de Octubre de 1917 permitió a los bolcheviques, dirigidos por Vladimir Lenin, tomar el control del gobierno en Petrogrado. El acontecimiento fue una de las etapas decisivas de la Revolución Rusa.
 
 
-[[Volver-&gt;Entrar a la Choza]]</tw-passagedata><tw-passagedata pid="42" name="recomendacion" tags="" position="700,0" size="100,100">Se recomienda si esta jugando en navegador utilizar 80% de zoom para una mejor experiencia.
+[[Volver-&gt;Entrar a la Choza]]
+
+&lt;!-- Aqui evidencia las operaciones con el SET de VARIABLES  --&gt;</tw-passagedata><tw-passagedata pid="42" name="recomendacion" tags="" position="700,0" size="100,100">Se recomienda si esta jugando en navegador utilizar 80% de zoom para una mejor experiencia.
 
 (t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;dissolve&quot;)[[Continuar]]</tw-passagedata><tw-passagedata pid="43" name="Pantalla de Muerte" tags="" position="300,400" size="100,100">&lt;img src = &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/HAS%20MUERTO%20SCREEN.jpg?raw=true&quot;width=1200 height=515&gt;&lt;/img&gt;
 
@@ -561,7 +600,9 @@ Has perdido toda tu vida, ¡¡HAS MUERTO!!, nunca, ¡¡¡NUNCA, SALDRAS DE ESTA 
 
 Sigue intentando escapar...
 
-[[Empezar de nuevo-&gt;Continuar]]</tw-passagedata><tw-passagedata pid="44" name=" S1" tags="" position="700,2300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Empezar de nuevo-&gt;Continuar]]
+
+&lt;!-- Pantalla de muerte, se accede cuando se llega a 0 de vida  --&gt;</tw-passagedata><tw-passagedata pid="44" name=" S1" tags="" position="700,2300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
 ]
@@ -603,7 +644,9 @@ Capucho: Oye, jajaja, no creas que te iras tan facil.
 Sere piadoso insecto, que quieres primero. 
 
 [[Numero pi]]
-[[Numeros primos]]</tw-passagedata><tw-passagedata pid="48" name="Numero pi" tags="" position="500,2600" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Numeros primos]]
+
+&lt;!-- Preguntas de matematicas con un grado de dificultad un poco mas alto, la idea es que quiten bastante vida para matarlo y obligarlo a entrar a bloques. Implementare despues de estas &quot;Batallas&quot;, un vistazo rapido al inventario  --&gt;</tw-passagedata><tw-passagedata pid="48" name="Numero pi" tags="" position="500,2600" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
 ]
