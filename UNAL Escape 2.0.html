@@ -1717,7 +1717,7 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 -Mala suerte, hay un agente de el ESMAD en medio del camino.
 
 [[Seguir-&gt;Seguircaminopis]]
-[[Volver al camino-&gt;seguirhumanas]</tw-passagedata><tw-passagedata pid="134" name="caminoarboles" tags="" position="7300,700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Volver al camino-&gt;seguirhumanas]]</tw-passagedata><tw-passagedata pid="134" name="caminoarboles" tags="" position="7300,700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
 ]
@@ -1731,7 +1731,20 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 -Enhorabuena!!, has encontrado una choza entre los arboles.
 
 [[Entrar a la choza-&gt;chozaarboles]]
-[[Volver-&gt;seguirhumanas]]</tw-passagedata><tw-passagedata pid="135" name="Seguircaminopis" tags="" position="7000,1100" size="100,100"></tw-passagedata><tw-passagedata pid="136" name="chozaarboles" tags="" position="7500,800" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Volver-&gt;seguirhumanas]]</tw-passagedata><tw-passagedata pid="135" name="Seguircaminopis" tags="" position="7000,1100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Bien papito, ¿usted para donde se dirige?
+
+[[Solo quiero irme a mi casa]]
+[[No te incumbe]]</tw-passagedata><tw-passagedata pid="136" name="chozaarboles" tags="" position="7500,800" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;style&gt;tw-story { 
 background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
 &lt;/style&gt;
@@ -1815,7 +1828,308 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 -Mira $name, el camino que sigue es muy largo, y de aqui para arriba no habran chozas. Resulta que el ESMAD atrapo a todos los bloques y zonas donde nos encontramos, por ende el ESMAD
 
 [[Entrar a la choza-&gt;chozaarboles]]
-[[Volver-&gt;seguirhumanas]]</tw-passagedata></tw-storydata>
+[[Volver-&gt;seguirhumanas]]</tw-passagedata><tw-passagedata pid="144" name="Solo quiero irme a mi casa" tags="" position="7100,1400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$Ungrani to ($Ungrani + 2))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;El agente estuvo de tu lado y te dio 2 Ungranizados&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-Ahhh ok, dale entonces. Espero no seas de esos capuchos malucos que quieren acabar con la Universidad. Mucho cuidado y juicioso en la casa.
+
+[[Seguir-&gt;entradapiscina]]</tw-passagedata><tw-passagedata pid="145" name="No te incumbe" tags="" position="7475,1300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Ah no???. Estos Universitarios de hoy en dia.
+
+[[Seguir-&gt;preguntadificil]]
+</tw-passagedata><tw-passagedata pid="146" name="preguntadificil" tags="" position="7600,1500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$vida to ($vida + -10))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Te ha dado un Bolillazo&quot;))
+(alert:&quot;Te ha quitado 10 puntos de vida&quot;))
+&lt;!-- Falta imagen aqui --&gt;
+
+-Bueno pelado, entonces me parece que te voy a hacer una pregunta entonces por irrespetuoso.
+
+[[Seguir-&gt;preguntadificil2]]
+</tw-passagedata><tw-passagedata pid="147" name="entradapiscina" tags="" position="7100,1800" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Ves la piscina de la Universidad y no hay nadie. Ya todos por este lado salieron.
+
+[[Seguir-&gt;caminoentrecoliseol]]
+</tw-passagedata><tw-passagedata pid="148" name="preguntadificil2" tags="" position="7700,1700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+&lt;!-- Falta imagen aqui --&gt;
+
+¿Qué nombre recibió el periodo de restauración imperial en Japón en 1868 que puso fin al shogunato y aceleró la modernización del país?
+
+[[Era Tokugawa-&gt;mal2]]
+[[Era Taisho-&gt;mal2]]
+[[Era Meiji-&gt;bien7]]
+[[Era Showa-&gt;mal2]]</tw-passagedata><tw-passagedata pid="149" name="mal2" tags="" position="7900,1700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$vida to ($vida + -40))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+&lt;!-- Falta imagen aqui --&gt;
+(alert:&quot;Te han quitado 40 puntos de vida&quot;)
+
+-Si seras. Vete de aqui maldito vago
+
+[[Seguir a la piscina-&gt;entradapiscina]]</tw-passagedata><tw-passagedata pid="150" name="bien7" tags="" position="7500,1700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+&lt;!-- Falta imagen aqui --&gt;
+
+-Respondiste bien, La Restauración Meiji devolvió el poder formal al emperador (Mutsuhito), abolió el sistema feudal de los samuráis y convirtió a Japón en una potencia industrial en pocas décadas. Ya puedes irte señor irrespetuoso.
+
+[[Seguir a la piscina-&gt;entradapiscina]]</tw-passagedata><tw-passagedata pid="151" name="caminoentrecoliseol" tags="" position="7200,2000" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Estas en el camino entre la pisicna y el bloque 7 (El coliseo)
+
+[[Seguir-&gt;caminoentrecoliseo2]]
+</tw-passagedata><tw-passagedata pid="152" name="caminoentrecoliseo2" tags="" position="7400,2100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Te has encontrado a L&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-Hola $name, estas bien?, olvide decirte que no deberias haber tomado este camino por todos los peligros que hay.
+
+Aqui esta el camino hacia el bloque 7 y no hay nadie, o no se si puede haber alguien. No entres ahi, mejor vete ya, quien sabe que puede pasar.
+
+Esto es lo ultimo, me dirijo tambien a la salida pero me desvio un poco a la piscina, me dijeron que no cerraron la bomba y voy en camino a apagarla.
+
+Cuidate.
+
+[[Seguir el camino-&gt;Cancha]]
+[[Entrar al coliseo]]
+</tw-passagedata><tw-passagedata pid="153" name="Cancha" tags="" position="7400,2500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Estas viendo desde aqui a salida, entre esto esta la cancha
+
+[[Seguir-&gt;caminocancha]]
+</tw-passagedata><tw-passagedata pid="154" name="Entrar al coliseo" tags="" position="7700,2200" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-No ves nada en la entrada ni en las gradas. Tal vez hayan dejado algo en las gradas.
+
+[[Volver al camino-&gt;Cancha]]
+[[Subir]]
+</tw-passagedata><tw-passagedata pid="155" name="Subir" tags="" position="7900,2400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;VETE DE AQUI&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-Te acaban de gritar que te vayas.
+
+[[Volver-&gt;Entrar al coliseo]]
+[[Subir-&gt;subir2]]
+</tw-passagedata><tw-passagedata pid="156" name="subir2" tags="" position="8100,2500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Ya no puedes escapar&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-¿Como haces de caso no?, estabamos en algo importante y llegas a INTERRUMPIRNOS.
+
+[[Seguir-&gt;seguir3]]</tw-passagedata><tw-passagedata pid="157" name="seguir3" tags="" position="8300,2500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;No debiste entrar&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-Si, supongo que te parece chistosito cuando te dan ORDENES y no las CUMPLES CIERTO???
+
+[[Seguir-&gt;seguir4]]</tw-passagedata><tw-passagedata pid="158" name="seguir4" tags="" position="8500,2500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Reza&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-¿Como te llamas?
+
+[[Me llamo $name-&gt;seguir5]]</tw-passagedata><tw-passagedata pid="159" name="seguir5" tags="" position="8800,2500" size="100,100">&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/06.%20Devil%20Lyric%20-%20Akira%20Yamaoka%20(Silent%20Hill%20Soundtrack).mp3&quot; autoplay&gt;&lt;/audio&gt;
+&lt;img src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Final%20raro.jpg?raw=true&quot; width=&quot;960&quot; height=&quot;432&quot; &gt;&lt;/img&gt;
+
+(alert:&quot;...&quot;)
+
+[[...-&gt;Inicio]]</tw-passagedata><tw-passagedata pid="160" name="caminocancha" tags="" position="7400,2700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Desde la cancha estan corriendo unos agentes del ESMAD que vienen hacia ti.
+
+[[Esperarlos]]
+[[Correr]]
+</tw-passagedata><tw-passagedata pid="161" name="Esperarlos" tags="" position="7200,2900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Crei que eras un capucho, si hubieras empezado a correr te hubiera lanzado este bolillo.
+
+[[Seguir-&gt;ESMAD]]
+</tw-passagedata><tw-passagedata pid="162" name="Correr" tags="" position="7600,2900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$vida to ($vida + -30))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Te han golpeado con el bolillo&quot;)
+(alert:&quot;Te han quitado 30 puntos de vida&quot;)
+&lt;!-- Falta imagen aqui --&gt;
+
+-El agente se detuvo despues de tirar el bolillo y te dio en la cabeza.
+
+[[Seguir camino]]
+</tw-passagedata><tw-passagedata pid="163" name="Seguir camino" tags="" position="7800,3100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Haz escapado de el ESMAD pero mala noticia, hay 3 agentes en la salida.
+
+[[Seguir-&gt;caminofinal]]
+</tw-passagedata><tw-passagedata pid="164" name="ESMAD" tags="" position="7200,3100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-¿Vas hacia la salida cierto?, te escoltamos ya que estamos cerca
+
+[[Seguir-&gt;ESMAD1]]
+</tw-passagedata><tw-passagedata pid="165" name="ESMAD1" tags="" position="7000,2900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Listo joven, menos mal confiaste en nosotros, llegaste sano y salvo a la salida. Cuidate.
+
+[[Seguir-&gt;Terminar juego]]
+</tw-passagedata><tw-passagedata pid="166" name="caminofinal" tags="" position="7800,3300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Haz escapado de el ESMAD pero mala noticia, hay 3 agentes en la salida.
+
+[[Seguir-&gt;caminopreguntas]]
+</tw-passagedata><tw-passagedata pid="167" name="caminopreguntas" tags="" position="7800,3500" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
