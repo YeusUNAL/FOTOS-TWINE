@@ -385,7 +385,7 @@ Tengo *Cazuelitas*, tengo *Ungranizado*.
 -La Cazuelita te da 20 puntos de vida
 -El Ungranizado te da 10 puntos de vida
 
-Si quieres apostamos tu destreza con algunas preguntas...La pregunta cuesta 2 creditos, si respondes bien te dare 5 creditos.
+Si quieres apostamos tu destreza con algunas preguntas...La pregunta cuesta 2 creditos, si respondes bien te dare 10 creditos.
 
 (if: not ((history:) contains &quot;Probar suerte con pregunta&quot;))[
 [[Probar suerte con pregunta]]]
@@ -539,7 +539,7 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 [[Seguir hacia la salida-&gt; S1]]
 [[Entrar al Bloque 4]]
 
-</tw-passagedata><tw-passagedata pid="40" name="Correcto2" tags="" position="1925,1350" size="100,100">(set:$credits to ($credits + 5 ))
+</tw-passagedata><tw-passagedata pid="40" name="Correcto2" tags="" position="1925,1350" size="100,100">(set:$credits to ($credits + 10))
 &lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 &lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Final%20Fantasy%20VII%20-%20Victory%20Fanfare%20%5BHD%5D%204.mp3&quot; autoplay&gt;&lt;/audio&gt;
 
@@ -549,7 +549,7 @@ K: Correcto $name, la respuesta era **La Revolucion de Octubre**:
 
 La Revolución de Octubre de 1917 permitió a los bolcheviques, dirigidos por Vladimir Lenin, tomar el control del gobierno en Petrogrado. El acontecimiento fue una de las etapas decisivas de la Revolución Rusa.
 
-Bien, te acabas de ganar 2 creditos
+Bien, te acabas de ganar 10 creditos
 
 
 
@@ -562,6 +562,8 @@ Bien, te acabas de ganar 2 creditos
 K: Buen intento para la proxima, la respuesta era **La Revolucion de Octubre**:
 
 La Revolución de Octubre de 1917 permitió a los bolcheviques, dirigidos por Vladimir Lenin, tomar el control del gobierno en Petrogrado. El acontecimiento fue una de las etapas decisivas de la Revolución Rusa.
+
+Te he quitado 2 creditos
 
 
 [[Volver-&gt;Entrar a la Choza]]</tw-passagedata><tw-passagedata pid="42" name="recomendacion" tags="" position="700,0" size="100,100">Se recomienda si esta jugando en navegador utilizar 80% de zoom para una mejor experiencia.
@@ -1721,10 +1723,11 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
 ]
+&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Zelda%20chest%20sound.mp3&quot; autoplay&gt;&lt;/audio&gt;
 &lt;style&gt;tw-story { 
 background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
 &lt;/style&gt;
-
+(alert:&quot;Has encontrado la Choza entre los arboles&quot;)
 &lt;!-- Falta imagen aqui --&gt;
 &lt;!-- Poner sonido de cofre de Zelda --&gt;
 
@@ -1759,7 +1762,7 @@ Tengo *Cazuelitas*, tengo *Ungranizado*.
 
 Si quieres apostamos tu destreza con algunas preguntas...La pregunta cuesta 2 creditos, si respondes bien te dare 10 creditos.
 
-Me corrieron del bloque y ahora nos acomodamos en estos arboles.
+Me corrieron del bloque y ahora nos acomodamos en estos arboles. De hecho, aqui tengo un mapa de la sede por si te interesa.
 
 (if: not ((history:) contains &quot;Probarpregunta&quot;))[
 [[Probar suerte con pregunta-&gt;Probarpregunta]]]
@@ -1768,6 +1771,7 @@ Me corrieron del bloque y ahora nos acomodamos en estos arboles.
 (if: $credits &gt;= 10)[[Comprar una Cazuelita por 10 creditos-&gt;compracazuelita]]
 (if: $credits &gt;= 5)[[Comprar UNgranizado por 5 creditos-&gt;compragrani]]
 [[Salir de la tienda-&gt;Inventario3]] 
+[[Ver mapa-&gt;Otromapa]]
 
 
 &lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Shop%20-%20The%20Legend%20of%20Zelda_%20Ocarina%20of%20Time%204.mp3&quot; autoplay&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="137" name="Probarpregunta" tags="" position="7500,1000" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
@@ -1778,13 +1782,13 @@ Me corrieron del bloque y ahora nos acomodamos en estos arboles.
 K: Bien estudiante, ya que estas en mi terreno, te hare preguntas de mis temas favoritos.
 Aqui te va:
 
-¿Qué revolución llevó a los bolcheviques al poder en Rusia en 1917?
+En la teoría económica marxista, ¿cómo se denomina al valor económico generado por el trabajador que excede el costo de su salario y del cual se apropia el capitalista?
 
-[[Revolucion de Octubre-&gt;Correcto2]]
-[[Revolucion Francesa-&gt;Mal2]]
-[[Revolucion de febrero de 1905-&gt;Mal2]]
-[[Revolucion Industrial-&gt;Mal2]]
-[[Volver-&gt;Entrar a la Choza]] 
+[[Plusvalia-&gt;Correcto3]]
+[[Inflación-&gt;Mal10]]
+[[RMaterialismo histórico-&gt;Mal10]]
+[[Oferta agregada-&gt;Mal10]]
+[[Volver-&gt;chozaarboles]] 
 
 
 </tw-passagedata><tw-passagedata pid="138" name="compracazuelita" tags="" position="7700,1000" size="100,100">(set:$Cazuela to ($Cazuela + 1))
@@ -1825,10 +1829,11 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 &lt;!-- Falta imagen aqui --&gt;
 
--Mira $name, el camino que sigue es muy largo, y de aqui para arriba no habran chozas. Resulta que el ESMAD atrapo a todos los bloques y zonas donde nos encontramos, por ende el ESMAD
+-Mira $name, el camino que sigue es muy largo, y de aqui para arriba no habran chozas. Resulta que el ESMAD atrapo a todos los bloques y zonas donde nos encontramos, por ende el ESMAD controlara todo de aqui para arriba, ya seria que lleves probiciones para ti en el camino y puedas sobrevivir. 
+Mucha suerte viajero.
 
 [[Entrar a la choza-&gt;chozaarboles]]
-[[Volver-&gt;seguirhumanas]]</tw-passagedata><tw-passagedata pid="144" name="Solo quiero irme a mi casa" tags="" position="7100,1400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Salir de la choza-&gt;seguirhumanas]]</tw-passagedata><tw-passagedata pid="144" name="Solo quiero irme a mi casa" tags="" position="7100,1400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
 ]
@@ -1839,7 +1844,7 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 (alert:&quot;El agente estuvo de tu lado y te dio 2 Ungranizados&quot;)
 &lt;!-- Falta imagen aqui --&gt;
 
--Ahhh ok, dale entonces. Espero no seas de esos capuchos malucos que quieren acabar con la Universidad. Mucho cuidado y juicioso en la casa.
+-Ahhh ok, dale entonces. Espero no seas de esos capuchos malucos que quieren acabar con la Universidad. Mucho cuidado y juicioso en la casa. Hoy estoy de buenas asi que tomate estos 2 Ungranizados que sobraron.
 
 [[Seguir-&gt;entradapiscina]]</tw-passagedata><tw-passagedata pid="145" name="No te incumbe" tags="" position="7475,1300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
@@ -1973,14 +1978,15 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 &lt;style&gt;tw-story { 
 background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
 &lt;/style&gt;
-
+(alert:&quot;No subas&quot;)
 &lt;!-- Falta imagen aqui --&gt;
 
 -No ves nada en la entrada ni en las gradas. Tal vez hayan dejado algo en las gradas.
 
 [[Volver al camino-&gt;Cancha]]
 [[Subir]]
-</tw-passagedata><tw-passagedata pid="155" name="Subir" tags="" position="7900,2400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+[[Ver mapa-mapovich]]
+[[Inventario-&gt;inventario4]]</tw-passagedata><tw-passagedata pid="155" name="Subir" tags="" position="7900,2400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
 ]
@@ -2115,7 +2121,7 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 -Listo joven, menos mal confiaste en nosotros, llegaste sano y salvo a la salida. Cuidate.
 
-[[Seguir-&gt;Terminar juego]]
+[[Seguir-&gt;ESMAD2]]
 </tw-passagedata><tw-passagedata pid="166" name="caminofinal" tags="" position="7800,3300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
 (if: $vida &lt;= 0)[
     (go-to: &quot;Pantalla de Muerte&quot;)
@@ -2126,10 +2132,248 @@ background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BA
 
 &lt;!-- Falta imagen aqui --&gt;
 
--Haz escapado de el ESMAD pero mala noticia, hay 3 agentes en la salida.
+-No puedes evitarlos, tienes que enfrentarlos si o si.
 
 [[Seguir-&gt;caminopreguntas]]
-</tw-passagedata><tw-passagedata pid="167" name="caminopreguntas" tags="" position="7800,3500" size="100,100"></tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="167" name="caminopreguntas" tags="" position="7800,3500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Bien pelado, lo vi corriendo desde alla arriba y tengo que hacerle unas cuantas preguntas para dejarlo irse de una vez por todas
+
+[[Seguir-&gt;caminopreguntas1]]
+</tw-passagedata><tw-passagedata pid="168" name="caminopreguntas1" tags="" position="7800,3700" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+¿Qué acontecimiento militar en 1942 supuso el mayor punto de inflexión en el Frente Oriental durante la Segunda Guerra Mundial?
+
+[[La Batalla de Inglaterra-&gt;mal3]]
+[[El Desembarco de Normandía-&gt;mal3]]
+[[La Batalla de Stalingrado-&gt;bien8]]
+[[La Batalla de las Ardenas-&gt;mal3]]</tw-passagedata><tw-passagedata pid="169" name="bien8" tags="" position="7700,3900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+Es correcto, El VI Ejército alemán fue cercado y derrotado en Stalingrado entre 1942 y 1943, destruyendo el mito de invencibilidad de la Wehrmacht e iniciando la ofensiva soviética hacia Berlín. Bien pelado, usted si estudia no?.
+
+Te hare una mas, que si respondes correctamente te iras ya de una vez por todas.
+
+[[seguir-&gt;preguntadecisiva]]</tw-passagedata><tw-passagedata pid="170" name="mal3" tags="" position="7900,3900" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$vida to ($vida + -20))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Te han dado un bolillazo&quot;)
+(alert:&quot;Te han quitado 20 puntos de vida&quot;)
+
+&lt;!-- Falta imagen aqui --&gt;
+
+POR DIOS, esa tan facil?, vos como que solo te gusta el tropel. Te hare otras 2 respuestas aver. Si te puedo ya dejar ir de todos modos.
+
+[[Seguir-&gt;ultimaspreguntas]]</tw-passagedata><tw-passagedata pid="171" name="preguntadecisiva" tags="" position="7600,4100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+¿Qué conflicto del siglo XIX (1839-1842) forzó a la dinastía Qing de China a ceder la isla de Hong Kong al Imperio Británico?
+
+[[La Rebelión Taiping-&gt;mal8]]
+[[Primera Guerra del Opio-&gt;bien10]]
+[[Levantamiento de los Bóxers-&gt;mal8]]
+[[Guerra Franco-China-&gt;bien8]]</tw-passagedata><tw-passagedata pid="172" name="ultimaspreguntas" tags="" position="8000,4100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+¿Durante qué fase de la Revolución Francesa (1793-1794), dirigida por Maximilien Robespierre, miles de personas fueron ejecutadas en la guillotina?
+
+[[El Directorio-&gt;mal4]]
+[[El Consulado-&gt;mal4]]
+[[La Asamblea Constituyente-&gt;mal4]]
+[[El Reinado del Terror-&gt;bien9]]</tw-passagedata><tw-passagedata pid="173" name="mal4" tags="" position="7900,4300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$vida to ($vida + -20))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Te han dado un bolillazo&quot;)
+(alert:&quot;Te han quitado 20 puntos de vida&quot;)
+
+&lt;!-- Falta imagen aqui --&gt;
+
+Y vuelve la burra al trigo. Otra vez equivocandote?. No me jodas, es que no lees ¿o que?
+
+[[Seguir-&gt;preguntadecisiva]]</tw-passagedata><tw-passagedata pid="174" name="bien9" tags="" position="8100,4300" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+Bien bien, A través del Comité de Salvación Pública, Robespierre desató una dura represión contra los considerados contrarrevolucionarios hasta su propia caída en el golpe de Termidor. 
+
+Almenos esta la respondiste bien, imposible que te quedara mal. Te dare entonces una sencilla para que puedas irte ya.
+
+[[seguir-&gt;preguntadecisiva]]</tw-passagedata><tw-passagedata pid="175" name="bien10" tags="" position="7400,4100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+Es correcta, Gran Bretaña reaccionó militarmente ante el bloqueo chino al comercio ilegal de opio, forzando la firma del Tratado de Nankín, el primero de los &quot;tratados desiguales&quot;. Ya te puede ir pelado, me alegra que almenos conozcas estas historias del Imperio Chino. Y cuidado que te atrapen donde no debes entrar. Vete ya.
+
+[[seguir-&gt;Salidonga]]</tw-passagedata><tw-passagedata pid="176" name="mal8" tags="" position="7600,4400" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+(set:$vida to ($vida + -20))
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+(alert:&quot;Te han dado un bolillazo&quot;)
+(alert:&quot;Te han quitado 20 puntos de vida&quot;)
+
+&lt;!-- Falta imagen aqui --&gt;
+
+La mas facil y la respondes mal?, no me jodas mas. Solo vete de aqui ya mismo pelado, y corriendo, lo veo.
+
+[[Seguir-&gt;Salidonga]]</tw-passagedata><tw-passagedata pid="177" name="Salidonga" tags="" position="7200,4500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Es definitivo, solo debes caminar un poco mas y alcanzaras la salida. y terminara esta historia.
+
+[[seguir-&gt;Terminar juego]]</tw-passagedata><tw-passagedata pid="178" name="Correcto3" tags="" position="7400,1125" size="100,100">(set:$credits to ($credits + 10))
+&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/Final%20Fantasy%20VII%20-%20Victory%20Fanfare%20%5BHD%5D%204.mp3&quot; autoplay&gt;&lt;/audio&gt;
+
+&lt;img src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Correcto%20K.png?raw=true&quot; width=960 height=432&gt;&lt;/img&gt;
+
+K: Correcto $name, la respuesta era **Plusvalia**:
+
+Según Marx, la plusvalía representa el trabajo no pagado del obrero, constituyendo la fuente fundamental de ganancia y acumulación en el sistema capitalista.
+
+Bien, te acabas de ganar 10 creditos
+
+
+
+[[Volver-&gt;chozaarboles]]</tw-passagedata><tw-passagedata pid="179" name="Mal10" tags="" position="7625,1125" size="100,100">(set:$credits to ($credits + -2 ))
+&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+&lt;audio src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/raw/refs/heads/main/freesound_community-wrong-47985.mp3&quot; autoplay&gt;&lt;/audio&gt;
+
+&lt;img src=&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/Incorrecto%20k.png?raw=true&quot; width=960 height=432&gt;&lt;/img&gt;
+
+K: Buen intento para la proxima, la respuesta era **Plusvalia**:
+
+Según Marx, la plusvalía representa el trabajo no pagado del obrero, constituyendo la fuente fundamental de ganancia y acumulación en el sistema capitalista.
+
+Te he quitado 2 creditos.
+
+[[Volver-&gt;chozaarboles]]</tw-passagedata><tw-passagedata pid="180" name="Otromapa" tags="" position="7725,825" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+&lt;img src= &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/MAPA%20TWINE.png?raw=true&quot; width=800 height=600&gt;
+
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+Mapa de la sede.
+[[Volver-&gt;chozaarboles]]
+
+</tw-passagedata><tw-passagedata pid="181" name="Ver mapa-mapovich" tags="" position="7800,2050" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+&lt;img src= &quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/MAPA%20TWINE.png?raw=true&quot; width=800 height=600&gt;
+
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+Mapa de la sede.
+[[Volver-&gt;Entrar al coliseo]]
+
+</tw-passagedata><tw-passagedata pid="182" name="inventario4" tags="" position="7700,2500" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+Inventario:
+
+$name Tienes:
+
+$vida Vida
+$credits Creditos
+
+Llevas contigo tambien:
+
+$Ungrani Ungranizado
+$Cazuela Cazuelita
+
+(if: $vida &lt;= 90 and $Ungrani &gt; 0)[[Tomar 1 Ungranizado-&gt;ungranicoli]]
+(if: $vida &lt;= 80 and $Cazuela &gt; 0)[[Comer 1 Cazuelita-&gt;cazucoli]]
+[[Volver-&gt;Entrar al coliseo]]</tw-passagedata><tw-passagedata pid="183" name="ungranicoli" tags="" position="7825,2625" size="100,100">(set:$Ungrani to ($Ungrani -1))
+(set:$vida to ($vida + 10))
+(go-to:&quot;Inventario4&quot;))</tw-passagedata><tw-passagedata pid="184" name="cazucoli" tags="" position="7575,2625" size="100,100">(set:$Cazuela to ($Cazuela -1))
+(set:$vida to ($vida + 20))
+(go-to:&quot;Inventario4&quot;))</tw-passagedata><tw-passagedata pid="185" name="ESMAD2" tags="" position="6975,3100" size="100,100">&lt;b&gt;$name: Vida=$vida | Creditos=$credits&lt;/b&gt;
+(if: $vida &lt;= 0)[
+    (go-to: &quot;Pantalla de Muerte&quot;)
+]
+&lt;style&gt;tw-story { 
+background-image: url(&quot;https://github.com/YeusUNAL/FOTOS-TWINE/blob/main/BACKGFRUSHDIASBD.png?raw=true&quot;); 
+&lt;/style&gt;
+
+&lt;!-- Falta imagen aqui --&gt;
+
+-Gracias a la ayuda de los agentes policiales has llegado a la salida sano y salvo, solo queda pasar por esa puerta y salir de una vez por todas.
+
+[[Seguir-&gt;Terminar juego]]
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
