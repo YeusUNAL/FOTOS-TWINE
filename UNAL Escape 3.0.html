@@ -28,16 +28,28 @@ Sobre el juego: El juego es una aventura sobre escapar de la Universidad en mome
 
 Disclaimer: No busca justificar o defender practicas bandalicas provocadas por estas protestas, solo buscamos el entretenimiento de accion y aprendizaje educativo a base de estos acontecimientos. Todo lo dicho y hecho en este juego no buscar levantar nuevas protestas. Es pura y netamente ficcion.
 
+Finales del juego: Este juego cuenta con diversos finales, no quisimos hacer solo 3 asi que hay distintos.
+
+1. Final Bueno: Cuando el jugador logra escapar de la Universidad
+
+2. Final Malo: Cuando el jugador muerte y no puede escabar.
+
+3. Final Misterioso: Se consigue entrando a una parte que el jugador no debe entrar.
+
+4. Final Milagro: El jugador es capturado por aliarse a los capuchos y llevado a la carcel.
+
 Autores del proyecto:
-- Julian Esteban Uribe Suarez
 
-- Carlos Andres Meneses Martinez
+-Julian Esteban Uribe Suarez - juribesu@unal.edu.co
 
-- Diego Alejandro George Cuadros
+-Alejandro Acuna Gonzalez - alacunag@unal.edu.co
 
-- Santiago Lozano Lopez
+-Carlos Andres Martinez Meneses - carmartinezme@unal.edu.co
 
-- Alejandro Acuña Gonzales
+-Diego Alejandro George Cuadros - dgeorge@unal.edu.co
+
+-Santiago Lozano Lopez - slozanol@unal.edu.co
+
 
 Todos estudiantes de Ingenieria de Sistemas e Informatica.
 
@@ -1468,7 +1480,7 @@ Tengo *Cazuelitas*, tengo *Ungranizado*.
 Si quieres apostamos tu destreza con algunas preguntas...La pregunta cuesta 2 creditos, si respondes bien te dare 10 creditos.
 
 (if: not ((history:) contains &quot;Probar suerte con pregunta4&quot;))[
-[[Probar suerte con pregunta4]]]
+[[Probar suerte con pregunta-&gt;Probar suerte con pregunta4]]]
 (if: $credits &gt;= 10)[[Comprar una Cazuelita por 10 creditos-&gt;cazub4]]
 (if: $credits &gt;= 5)[[Comprar UNgranizado por 5 creditos-&gt;ungranib4]]
 [[Salir de la tienda-&gt;Inventario2]] 
